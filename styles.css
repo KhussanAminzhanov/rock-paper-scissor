@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.choises {
+    display: flex;
+    flex-direction: row;
+}
+
+.choise {
+    border-radius: 10px;
+    background-color: rgba(254, 32, 60, 0.85);
+    width: 150px;
+    height: 150px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choise:hover {
+    background-color: rgba(254, 32, 60, 1);
+}

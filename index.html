@@ -4,62 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissor</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script>
-        function computerPlay() {
-            randNum = Math.floor(Math.random()*3);
-            return randNum === 0 ? 'rock'
-                : randNum === 1 ? 'paper'
-                : 'scissor';
-        }
-
-        function playGame(playerSelection, computerSelection) {
-            let lowerPlayerSelection = playerSelection.toLowerCase();
-            if (lowerPlayerSelection === computerSelection) {
-                return 'Draw!'
-            } else if (lowerPlayerSelection === 'rock') {
-                if (computerSelection === 'scissor') {
-                    return 'You Win! Rock beats Scissor';
-                } else {
-                    return 'You Lose! Paper beats Rock';
-                }
-            } else if (lowerPlayerSelection === 'paper') {
-                if (computerSelection === 'rock') {
-                    return 'You Win! Paper beats Rock';
-                } else {
-                    return 'You Lose! Scissor beats Paper';
-                }
-            } else if (lowerPlayerSelection === 'scissor') {
-                if (computerSelection === 'paper') {
-                    return 'You Win! Scissor beats Paper';
-                } else {
-                    return 'You Lose! Rock beats Scissor';
-                }
-            } else {
-                return 'Chose rock, paper or scissor';
-            }
-        }
-
-        function game() {
-            let score = 0;
-            for (let i = 0; i < 5; i++) {
-                let playerSelection = prompt('Chose the item');
-                let computerSelection = computerPlay();
-                let result = playGame(playerSelection, computerSelection)
-                console.log(result)
-                if (result.slice(4, 7) === 'Win') {
-                    score++;
-                }
-            }
-            if (score >= 3) {
-                console.log('You Win!');
-            } else {
-                console.log('You Lose!');
-            }
-        }
-
-        game();
-    </script>
+    <div class="score">0 : 0</div>
+    <div class="choises">
+        <div id="rock" class="choise">ROCK</div>
+        <div id="paper" class="choise">PAPER</div>
+        <div id="scissor" class="choise">SCISSOR</div>
+    </div>
+    <p class="result"></p>
+    <script src="index.js"></script>
 </body>
 </html>
